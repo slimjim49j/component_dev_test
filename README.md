@@ -1,6 +1,6 @@
 # Component Dev Test
 
-(Link to the live site)[https://slimjim49j.github.io/component_dev_test]
+[Link to the live site](https://slimjim49j.github.io/component_dev_test)
 
 ## Installation:
 - Download / clone the repo with Git
