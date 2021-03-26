@@ -1,11 +1,13 @@
 @keyframes fade-in {
-    from {
-        opacity: 0.7;
-    }
+    from { opacity: 0.7; }
 
-    to {
-        opacity: 1;
-    }
+    to { opacity: 1; }
+}
+
+@keyframes rotate-in {
+    from  { transform: translateY(-50px) rotateX(90deg); }
+
+    to { transform: translateY(0) rotateX((0deg)); }
 }
 
 .marquee-background {
@@ -40,7 +42,7 @@
 .main-content {
     height: 50%;
     padding-top: 38.5vh;
-    padding-bottom: 5vh;
+    padding-bottom: 20vh;
     margin-bottom: 22.1vh;
 
     display: grid;
@@ -92,6 +94,12 @@
     padding-left: 6.5%;
     bottom: 0;
     left: 0;
+}
+
+.initial-load .cta-container {
+    transform-style: preserve-3d;
+    animation-name: rotate-in;
+    animation-duration: 1s;  
 }
 
 .cta-container h3 {
