@@ -8,6 +8,6 @@
 - Run ```npm start``` to start the local server
 - Navigate over to ```localhost:3000/component_dev_test```
 
-Some Slight Modifications:
+**Some Slight Modifications:**
 - used Open Sans instead Helvetica Neue
 - used an arrow Ionicon next to the "let's talk" button, since no asset for that icon was provided
