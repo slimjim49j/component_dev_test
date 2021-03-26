@@ -3,9 +3,10 @@ import "./marquee.css";
 import {ReactComponent as Arrow} from "./arrow-forward-outline.svg";
 
 function Marquee(props) {
+    
     return (
         <div className="marquee-background"
-            style={{backgroundImage: `url('/backgrounds/${props.background}')`}}
+          style={{ backgroundImage: `url("${process.env.PUBLIC_URL}/backgrounds/${props.background}")`}}
         >
             <div className="marquee-container">
                 <div className="main-content">
