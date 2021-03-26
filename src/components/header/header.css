@@ -1,0 +1,70 @@
+header {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+
+    width: 82%;
+    max-width: var(--max-width);
+    padding: 2.3vh 9% 0 9%;
+}
+
+.header-left {
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-links {
+    padding-top: 15px;
+}
+
+.nav-links a {
+    display: block;
+    color: white;
+
+    font-size: 0.875rem;
+    line-height: 1.625rem;
+    letter-spacing: 0;
+
+    text-decoration: none;
+
+    transition: 0.3s ease-in-out color;
+}
+
+.nav-links a.selected {
+    color: var(--marigold);
+}
+
+.contact-btn {
+    background-color: transparent;
+    color: white;
+    box-sizing: border-box;
+
+    font-weight: 700;
+    font-size: 0.938rem;
+    letter-spacing: 0;
+    
+    width: 11.8%;
+    min-width: 100px;
+    height: 5.2vh;
+    border: 1px solid white;
+    margin-top: 0.8vh;
+
+    transition: 0.2s ease-out opacity;
+    opacity: 0.9;
+}
+
+.contact-btn:focus {
+    outline: 1px solid rgba(255, 255, 255, 0.37);
+}
+
+.contact-btn:hover {
+    opacity: 1;
+}
+
+.contact-btn:active {
+    opacity: 0.7;
+}

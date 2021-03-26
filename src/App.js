@@ -1,24 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { BrowserRouter as Router, Switch, Route, Redirect } from "react-router-dom";
+import { pages } from "./content.json";
+
+import Marquee from "./components/marquee/marquee.js";
+import Header from "./components/header/header";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <Router>
+      <Header pages={pages.map(({title, slug}) => ({title, slug })) } />
+      <Switch>
+        {
+          pages.map(page => (
+            <Route path={`/${page.slug}`} key={page.title}>
+              <Marquee title={page.title} {...page.blocks[0]} />
+            </Route>
+          ))
+        }
+        <Route exact path="/">
+          <Redirect to={`/${pages[0].slug}`} />
+        </Route>
+      </Switch>
+    </Router>
+    </>
   );
 }
 
