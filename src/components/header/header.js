@@ -26,7 +26,7 @@ function Header({ pages }) {
       </div>
       <button className="contact-btn">
         Contact Us
-            </button>
+      </button>
     </header>
   );
 }
