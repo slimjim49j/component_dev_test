@@ -5,6 +5,13 @@ import { pages } from "./content.json";
 import Marquee from "./components/marquee/marquee.js";
 import Header from "./components/header/header";
 
+/*
+ * App sets up the different routes for the different pages,
+ * Each page is a marquee component that is populated via props.
+ * 
+ * initalLoad is used to create a CSS class that will trigger build-in
+ * animations on the initial page load or on refresh
+ */
 function App() {
   const [initialLoad, setInitialLoad] = useState(true);
   useEffect(() => {

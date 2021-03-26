@@ -4,8 +4,12 @@ import { ReactComponent as Logo } from "./abc_logo.svg";
 
 import "./header.css";
 
+/*
+ * The Header uses useLocation to detect changes in the url path to update the
+ * corresponding navigation link
+ */
 function Header({ pages }) {
-  const location = useLocation();
+  const { pathname } = useLocation();
 
   return (
     <header>
@@ -15,7 +19,7 @@ function Header({ pages }) {
           {
             pages.map(({ title, slug }) => (
               <Link to={`/${slug}`}
-                className={(location.pathname === `/${slug}` ? "selected" : "")}
+                className={(pathname === `/${slug}` ? "selected" : "")}
                 key={slug}
               >
                 {title}
